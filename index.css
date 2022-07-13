@@ -1,40 +1,58 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
+
 body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
     background-color: rgb(105, 105, 151);
-}
-h1 {
-    padding: 1vw;
-    color: rgb(247, 247, 247);
-}
-main {
     display: flex;
-    width: 100vw;
+    flex-direction: column;
     height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+h1 {
+    color: rgb(247, 247, 247);
+    padding: 1vw;
+}
+
+main {
     background-color: rgb(105, 105, 151);
+    display: flex;
+    height: 100vh;
+    width: 100vw;
 }
 
-.cards {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-padding: 0 300px;
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 500px;
+    margin: auto;
+    width: 800px;
 }
 
-.card-up {
-width: 100px;
-height: 150px;
-margin:  10px 15px;
-border-radius: 12px;
-box-shadow: 1px 2px 5px rgb(31, 31, 31);
-cursor: pointer;
+.card {
+    cursor: pointer;
+    height: 150px;
+    margin: 10px 15px;
+    position: relative;
+    width: 100px;
+}
+
+.card-up,
+.card-down {
+    border-radius: 12px;
+    box-shadow: 1px 2px 5px rgb(31, 31, 31);
+    height: 150px;
+    justify-content: center;
+    position: absolute;
+    width: 100px;
+}
+
+.flipcard {
+    transform: rotateY(180deg);
 }

@@ -6,7 +6,7 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 shuffle();
 
 function flipCard() {
-    console.log('Clicou na Carta');
+    this.classList.toggle('flipcard');
 }
 
 function shuffle() {
