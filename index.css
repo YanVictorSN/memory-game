@@ -32,6 +32,7 @@ main {
     justify-content: center;
     height: 500px;
     margin: auto;
+    perspective: 1000px;
     width: 800px;
 }
 
@@ -40,11 +41,18 @@ main {
     height: 150px;
     margin: 10px 15px;
     position: relative;
+    transform-style: preserve-3d;
+    transition: transform .6s ease;
     width: 100px;
+}
+
+.card.flipcard {
+    transform: rotateY(180deg);
 }
 
 .card-up,
 .card-down {
+    backface-visibility: hidden;
     border-radius: 12px;
     box-shadow: 1px 2px 5px rgb(31, 31, 31);
     height: 150px;
@@ -53,6 +61,6 @@ main {
     width: 100px;
 }
 
-.flipcard {
-    transform: rotateY(180deg);
+.card-up {
+    transform: rotateY(-180deg);
 }
